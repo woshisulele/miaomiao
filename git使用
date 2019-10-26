@@ -1,0 +1,35 @@
+快捷方式：
+git config --global alias.co checkout 
+git config --global alias.ci commit 
+git config --global alias.br branch
+git config --global alias.st status
+
+
+
+
+1.git status
+
+2.git add .
+ 
+3.git commit -m 'up'
+
+git push origin master:dev(创建dev分支并提交到dev分支)
+
+（重复1,2，3）
+
+git push origin dev:dev(提交本地dev分支代码到线上dev分支)========（在pull request就行）
+
+
+git co dev(切换分支后一定要git pull一下，不然还是旧的)
+
+git br(查看当前分支)
+
+冲突：
+git pull(冲突)
+git stash（这样本地的所有修改就都被暂时存储起来）
+git pull
+git stash pop stash@{0}(系统自动合并修改的内容，但是其中有冲突，需要解决其中的冲突)
+git stash list(Git栈信息打印出来)
+然后在文件里解决冲突。
+
+其中Updated upstream 和=====之间的内容就是pull下来的内容，====和stashed changes之间的内容就是本地修改的内容
